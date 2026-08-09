@@ -43,6 +43,20 @@ http.createServer((req, resp) => {
             req.on('end', () => {
                 let rawData = Buffer.concat(dataBody).toString()
                 let readableData = queryString.parse(rawData)
+
+                let dataString = "My name is " + readableData.name + "and my email is " + readableData.email
+                // fs.writeFileSync('text/'+readableData.name+'.txt', dataString)
+
+                fs.writeFile('text/'+readableData.name+'.txt', dataString, (err) => {
+                    if(err) {
+                        resp.end('Internal Server Error')
+                        return
+                    }
+                    else {
+                        console.log('File Created')
+                    }
+                })
+                
                 console.log(readableData)
             })
             resp.write('<h1> Data Submimtted </h1>')
