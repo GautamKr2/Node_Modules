@@ -44,6 +44,9 @@ http.createServer((req, resp) => {
                 let rawData = Buffer.concat(dataBody).toString()
                 let readableData = queryString.parse(rawData)
 
+                resp.write(`<h2>Name : ${readableData.name}</h2>`)
+                resp.write(`<h2>Email: ${readableData.email}</h2>`)
+
                 let dataString = "My name is " + readableData.name + "and my email is " + readableData.email
                 // fs.writeFileSync('text/'+readableData.name+'.txt', dataString)
 
@@ -58,9 +61,10 @@ http.createServer((req, resp) => {
                 })
                 
                 console.log(readableData)
+                resp.end()
             })
             resp.write('<h1> Data Submimtted </h1>')
         }
-        resp.end()
+        //resp.end()
     })
 }).listen(3200)
