@@ -1,0 +1,96 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+
+/* Styling our code */
+.navbar {
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1 rem 2 rem;
+}
+
+.logo {
+    padding-left: 0.8rem;
+    font-size: 1.5rem;
+}
+
+ul {
+    padding: 1.5rem 2.5rem 1.5rem;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff1111;
+}
+
+.main {
+    background-color: #1111ff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #fff;
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+
+.main p {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.btn {background-color: #fff;
+    font-size: 1.3rem;
+    color: #1111ff;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 0.4em;
+}
+
+.btn:hover {
+    background-color: #efc1c1;
+    color: #1010be;
+}
+
+.footer {
+    background-color: #333;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    text-align: center;
+}
